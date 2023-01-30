@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="yeni_sase_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.20778284911169 0.500688780974497 -0.821119105509982"
+        rpy="0 0 0" />
+      <mass
+        value="3.39583209349639" />
+      <inertia
+        ixx="0.126259967804445"
+        ixy="-1.75049323304669E-18"
+        ixz="-6.63675144834222E-05"
+        iyy="0.0845853380793104"
+        iyz="-1.00908729378993E-18"
+        izz="0.0563582526867151" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeni_sase_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeni_sase_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.040786591103774 0.0106331424004903 -0.0147832753958783"
+        rpy="0 0 0" />
+      <mass
+        value="13.5579685673451" />
+      <inertia
+        ixx="0.380706613752218"
+        ixy="6.35942890933647E-05"
+        ixz="-0.00103243351106835"
+        iyy="0.895637248320483"
+        iyz="7.34300665018099E-05"
+        izz="0.517867405124061" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeni_sase_urdf/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yeni_sase_urdf/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0"
+    type="fixed">
+    <origin
+      xyz="-0.074143 0.79765 0.43372"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

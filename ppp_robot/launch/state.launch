@@ -1,0 +1,17 @@
+<launch>
+  <!--<param name="robot_description" textfile="$(find old_robot_desc)/urdf/old_robot.urdf.xacro"/>-->
+  <param name="robot_description" textfile="$(find ppp_robot)/urdf/ppp_robot.urdf.xacro"/>
+    
+   
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <!--<remap from="robot_description" to="my_robot_description" />-->
+    <!--<remap from="joint_states" to="different_joint_states" />-->
+    
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value=""/>
+  </node>
+  
+  <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher">
+  </node>
+  
+</launch>

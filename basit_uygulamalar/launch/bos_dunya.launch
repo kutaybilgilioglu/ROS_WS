@@ -1,0 +1,24 @@
+<launch>
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/yarisma_alani.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  <rosparam command="load" file="$(find basit_uygulamalar)/params/devriye_parametre.yaml"/>
+  
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find basit_uygulamalar)/urdf/test.xacro" />
+    
+    <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description -model test -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)"/>
+  
+  
+  
+</launch>

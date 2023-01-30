@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/uyarirm.png</file>
+    <file>icons/newcircle.png</file>
+    <file>icons/onoff-r.png</file>
+    <file>icons/hizzrm.png</file>
+    <file>icons/imu-removebg-preview(1).png</file>
+    <file>icons/circlee.png</file>
+    <file>icons/uyarii.png</file>
+    <file>icons/batteryyrm.png</file>
+    <file>icons/crll.png</file>
+    <file>icons/radiows.png</file>
+    <file>icons/circlebg.png</file>
+    <file>icons/lockk.png</file>
+  </qresource>
+</RCC>

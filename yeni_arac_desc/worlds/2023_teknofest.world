@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="my_mesh">
+      <pose>0 0 0.02  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+            	
+            	<uri>//2023_teknofest.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        
+        <collision name="collision">
+          <geometry>
+            <mesh>
+            	
+            	<uri>//2023_teknofest.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        
+      </link>
+    </model>
+    
+    <model name="my_mesh1">
+      <pose>0 0 0.021  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+            	
+            	<uri>/home/kutay/catkin_ws/src/yeni_arac_desc/worlds/qrs/onl_qrs.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        
+        
+        
+      </link>
+    </model>
+  </world>
+</sdf>

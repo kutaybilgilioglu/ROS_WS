@@ -1,0 +1,48 @@
+<param name="robot_description" command="$(find xacro)/xacro --inorder $(find basit_uygulamalar)/urdf/test.xacro" />
+
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model test -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+  
+  
+  
+  
+  <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/rover_parkur.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+    
+    
+    
+    
+    
+    <model name='turtlebot3_waffle_pi'>
+        <pose>8.60751 0.014001 -0.001009 -1e-06 0.003188 0.029099</pose>
+        <scale>1 1 1</scale>
+        <link name='base_footprint'>
+          <pose>8.60751 0.014001 -0.001009 -1e-06 0.003188 0.029099</pose>
+          <velocity>1e-06 3e-06 3.1e-05 2.5e-05 -0.000144 1.8e-05</velocity>
+          <acceleration>-0 -0 0 -0 -0 -0</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='wheel_left_link'>
+          <pose>8.60343 0.157943 0.031992 1.53817 -1.54611 -3.07988</pose>
+          <velocity>-5e-06 2e-06 0 -1.8e-05 -0.000167 1.6e-05</velocity>
+          <acceleration>-0 -0 -0 -0 -0 -0</acceleration>
+          <wrench>-0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='wheel_right_link'>
+          <pose>8.61181 -0.129935 0.031993 1.52104 -1.55483 -3.06275</pose>
+          <velocity>-1e-06 4e-06 0 -5.7e-05 -0.000153 1.7e-05</velocity>
+          <acceleration>-0 -0 -0 -0 -0 -0</acceleration>
+          <wrench>-0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      
+      
+      
+      
+      <param name="robot_description" command="$(find xacro)/xacro --inorder $(find basit_uygulamalar)/urdf/test.xacro" />
+    
+    <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param robot_description -model test -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)"/>
